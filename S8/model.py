@@ -9,7 +9,7 @@ Created on Sun Jan 31 11:36:43 2021
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+import torch.backends.cudnn as cudnn
 
 class BasicBlock(nn.Module):
     expansion = 1
@@ -71,5 +71,10 @@ class ResNet(nn.Module):
         return out
 
 
-def ResNet18():
-    return ResNet(BasicBlock, [2, 2, 2, 2])
+def ResNet18(device):
+    net_arch = ResNet(BasicBlock, [2, 2, 2, 2])
+    net_arch = net_arch.to(device)
+    if device == 'cuda':
+        net_arch = torch.nn.DataParallel(net_arch)
+        cudnn.benchmark = True
+    return net_arch

@@ -29,5 +29,4 @@ def test(epoch,net,testloader,device,criterion):
                 pbar.update(1)
                 # progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
                 #              % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
-    
-    print(f'\nEpoch: {epoch} Train set: Average loss: {(test_loss/(batch_idx+1))}, Accuracy: {100.*correct/total}%')
+    return (test_loss/(batch_idx+1)),100.*correct/total

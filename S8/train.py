@@ -27,7 +27,7 @@ def train(epoch,net,device,trainloader,optimizer,criterion):
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
             pbar.update(1)
-    print(f'\nEpoch: {epoch} Train set: Average loss: {(train_loss/(batch_idx+1))}, Accuracy: {100.*correct/total}%')
+    return (train_loss/(batch_idx+1)),100.*correct/total
         # print(f'batch_idx:{batch_idx},loss:{(train_loss/(batch_idx+1))},acc:{100.*correct/total}')
         # progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
         #              % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))

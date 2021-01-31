@@ -24,7 +24,7 @@ def test(epoch,net,testloader,device,criterion):
             _, predicted = outputs.max(1)
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
-            print(f'batch_idx:{batch_idx},loss:{(train_loss/(batch_idx+1)},acc:{100.*correct/total}')
+            print(f'batch_idx:{batch_idx},loss:{(test_loss/(batch_idx+1))},acc:{100.*correct/total}')
 
             # progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
             #              % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))

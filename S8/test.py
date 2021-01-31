@@ -8,7 +8,7 @@ Created on Sun Jan 31 11:49:34 2021
 import torch
 
 
-def test(epoch,net,testloader,device,criterion,progress_bar,batch_idx):
+def test(epoch,net,testloader,device,criterion):
     global best_acc
     net.eval()
     test_loss = 0
@@ -24,6 +24,9 @@ def test(epoch,net,testloader,device,criterion,progress_bar,batch_idx):
             _, predicted = outputs.max(1)
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
+            print(f'batch_idx:{batch_idx},loss:{(train_loss/(batch_idx+1)},acc:{100.*correct/total}')
 
-            progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-                         % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+            # progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+            #              % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+
+

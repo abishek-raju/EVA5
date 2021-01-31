@@ -7,7 +7,7 @@ Created on Sun Jan 31 11:43:16 2021
 """
 
 
-def train(epoch,net,device,trainloader,optimizer,criterion,progress_bar,batch_idx):
+def train(epoch,net,device,trainloader,optimizer,criterion):
     print('\nEpoch: %d' % epoch)
     net.train()
     train_loss = 0
@@ -26,5 +26,6 @@ def train(epoch,net,device,trainloader,optimizer,criterion,progress_bar,batch_id
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
 
-        progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-                     % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
+        print(f'batch_idx:{batch_idx},loss:{(train_loss/(batch_idx+1)},acc:{100.*correct/total}')
+        # progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+        #              % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))

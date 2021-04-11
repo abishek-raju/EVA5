@@ -3,8 +3,8 @@ import torch.nn.functional as F
 
 
 class ResNet_11(nn.Module):
-    def _init_(self):
-        super(ResNet_11, self)._init_()
+    def __init__(self):
+        super(ResNet_11, self).__init__()
         # PrepLayer - Conv 3x3 s1, p1) >> BN >> RELU [64k]
         self.prepLayer = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), padding=1, bias=False),

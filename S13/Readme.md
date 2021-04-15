@@ -12,6 +12,24 @@ The network was trained for a total of 300 epochs.
 <img src="./markdown_files/Screenshot from 2021-04-15 20-53-20.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
+` `
+Sample Ouput's on the custom dataset:
+
+<img src="./markdown_files/download.jpeg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
+` `
+<img src="./markdown_files/download (1).jpeg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
+
+
+
+
+
+
 As mentioned in the assignment ffmpeg was recommended to use. Because of our prior experience in using OpenCV we used it to both seperate and merge the frames.
 
 To seperate the images

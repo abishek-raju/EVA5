@@ -1,6 +1,6 @@
-#YOLO V3
+# YOLO V3
 
-##Training YOLOV3 with custom dataset
+## Training YOLOV3 with custom dataset
 Original credit goes to this [repo.](https://github.com/ultralytics/yolov3)
 Additionally we also have to change the Filters parameter as mentioned [here.](https://medium.com/@quangnhatnguyenle/how-to-train-yolov3-on-google-colab-to-detect-custom-objects-e-g-gun-detection-d3a1ee43eda1#120b)
 
@@ -64,7 +64,7 @@ ToDO:
 
 2.Change the default anchor boxes in Yolo.
 
-
+3.Add sound back to the annotated video.
 
 
 

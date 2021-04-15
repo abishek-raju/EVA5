@@ -51,9 +51,20 @@ frames_to_video(inputpath,outpath,fps)
 ```
 
 
-Final Video:
+[Final Video:](http://www.youtube.com/watch?v=1ruys6NzdQI )
 
 [![](http://img.youtube.com/vi/1ruys6NzdQI/0.jpg)](http://www.youtube.com/watch?v=1ruys6NzdQI "")
+
+
+
+
+ToDO:
+
+1.Train Yolo(for any other model also) with a low resolution images for some epochs and increase resolution afterwards.
+
+2.Change the default anchor boxes in Yolo.
+
+
 
 
 
